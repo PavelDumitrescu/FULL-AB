@@ -82,7 +82,6 @@
 }
 
 .d1l {
-  display: inline;
   position: absolute;
   margin-left: 48.5vw;
   margin-top: 88vh;
@@ -99,7 +98,6 @@
 }
 
 .u1l {
-  display: inline;
   position: absolute;
   margin-left: 48.5vw;
   margin-top: 1vh;
@@ -148,7 +146,6 @@
 }
 
 .next {
-  position: absolute;
   right: 0;
   margin-right: 9.5vw;
   transform: rotate(-90deg);
@@ -167,6 +164,25 @@
   opacity: 0.5;
 }
 
+ol {
+  width:100%;
+  margin-left: 33.75vw;
+  position: absolute;
+  bottom: 0;
+}
+
+ol li{
+  background: white;
+  border-radius: 50%;
+  display: inline-block;
+  width:2vw;
+  height:2vh;
+  cursor: pointer;
+}
+
+.red {
+  background-color: red;
+}
 
 .dcsinfotext {
   color: white;
@@ -176,7 +192,7 @@
 }
 
 #three {
-  background-image: url(../img/sky.jpg);
+  background-image: url(../img/clouds.gif);
   background-size: cover;
   background-attachment: fixed;;
 }
@@ -185,15 +201,29 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  position: absolute;
+  height: 60vh;
+  width: 80vw;
+  margin-top: 5vh;
   margin-left: 10vw;
-  margin-top: 10vh;
 }
 
 .plane {
   width: 20vw;
-  height: auto;
-  margin-right: 7vw;
-  margin-top: 10vh;
-  border: solid 2px black;
+  height: 25vh;
+  border: solid 4px white;
+  border-radius: 10px;
+  transition: 200ms;
+  display: flex;
+}
+
+.planebutton:hover {
+  filter: grayscale(0.5);
+}
+
+.paircraft {
+  font-size: 3em;
+  color: white;
+  margin-left: 30vw;
+  margin-top: 7vh;
+  text-shadow: -2px 2px 0 #000, 2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000;
 }

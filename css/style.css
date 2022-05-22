@@ -264,7 +264,7 @@ ol li{
   margin-right: 5vw;
 }
 
-/* Styling för bilderna */ 
+/* Styling för bilderna */
 .plane {
   width: 20vw;
   height: 70%;
@@ -276,4 +276,30 @@ ol li{
 
 .planebutton:hover {
   filter: grayscale(0.5);
+}
+
+/* Bakgrund på sida 2 */
+.pagetwo {
+  background-image: url(../img/peace.jpg);
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+}
+
+/* knapp tillbaka till sida 1 */
+.back {
+  width: 100vw;
+  height: 10vh;
+  background-color: red;
+  color: white;
+  font-size: 4.5vw;
+  position: fixed;
+  text-align: center;
+  padding-bottom: 3vh;
+  border: 2px white solid;
+  margin-top: 87vh;
+}
+
+.back:hover {
+  background-color: rgba(255, 102, 102, 0.95)
 }

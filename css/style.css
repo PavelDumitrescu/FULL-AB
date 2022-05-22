@@ -1,11 +1,14 @@
+/* Styling som gäller för hela sidan */
 * {
   margin: 0;
   padding: 0;
   font-family: "Prompt", sans-serif;
   filter: drop-shadow(0 1vw 0.5vw rgba(0,0,0,0.2));
   scroll-behavior: smooth;
+  text-decoration: none;
 }
 
+/* Styling för navbar*/
 #navbar {
   width: 100%;
   background-color: rgba(47, 47, 47);
@@ -16,33 +19,45 @@
 
 .pagename {
   color: white;
-  font-size: 3vw;
+  font-size: 2.5vw;
   padding-bottom: 2vh;
-  padding-left: 5vh;
   padding-top: 2vh;
+  margin-left: 2vw;
 }
 
 .logo {
-  width: 6.5vw;
+  width: 6vw;
   transform: scaleX(-1);
   margin-right: 30vw;
 }
 
+/* Styling för länkarna i navbaren, de placeras med hjälp av flexbox*/
 #navbar a {
   color: white;
   border: 2px white solid;
   padding: 0.3em;
-  font-size: 1.5vw;
+  font-size: 1em;
   display: flex;
   justify-content: space-between;
   margin-right: 2vw;
-  text-decoration: none;
   border-radius: 5px;
+  width: 8vw;
+  height: 3vh;
+  padding-top: 1vh;
 }
 
+/* Anpassar storleken av länkarnas knappar när skärmens bredd blir mindre än 800 pixels */
+@media (max-width: 800px) {
+  #navbar a {
+    width: 12vw;
+    margin-right: 1vw;
+    font-size: 0.8em;
+  }
+}
+
+/* Ändrar knapparnas färg när musen hovrar över*/
 .navbarlink:hover {
   background-color: rgba(199, 196, 197, 0.59);
-
 }
 
 .f16intro {
@@ -50,15 +65,17 @@
   height: 93vh;
 }
 
+/* Grå bakgrunden bakom DCS logan*/
 .dcs1 {
   width: 50vw;
-  height: 40vh;
+  height: auto;
   background-color: rgba(0, 0, 0, 0.69);
   position: absolute;
   margin-left: 25vw;
   margin-top: 25vh;
 }
 
+/* DCS logan */
 .dcs2 {
   width: 80%;
   height: 75%;
@@ -66,15 +83,27 @@
   margin-right: auto;
   display: block;
   margin-top: 5vh;
+  padding-bottom: 10%;
 }
+
+/* Ändrar storleken av DCS logan när skärmens bredd blir mindre än 1000 pixel*/
+@media (max-width: 1000px) {
+  .dcs1 {
+    width: 70vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
+  }
+}
+
 
 .one {
   display: flex;
 }
 
+/* Styling och placering för upp/ned pilarna*/
 .d1 {
-  width: 3vw;
-  height: 2em;
+  width: 3.5vmax;
+  height: auto;
 }
 
 .d1:hover {
@@ -83,13 +112,13 @@
 
 .d1l {
   position: absolute;
-  margin-left: 48.5vw;
-  margin-top: 88vh;
+  margin-left: 48.25vw;
+  margin-top: 86vh;
 }
 
 .u1 {
-  width: 3vw;
-  height: 2em;
+  width: 3.5vmax;
+  height: auto;
   transform: scaleY(-1);
 }
 
@@ -99,10 +128,12 @@
 
 .u1l {
   position: absolute;
-  margin-left: 48.5vw;
-  margin-top: 1vh;
+  margin-left: 48.25vw;
+  margin-top: 3vh;
 }
+/* Styling för pilarna tar slut */
 
+/* Video som fyller hela bakgrunden på section två */
 #myVideo {
   position: fixed;
   right: 0;
@@ -111,7 +142,7 @@
   height: 93vh;
 }
 
-
+/* Snap scrolling som gör så att man tas upp eller ned en hel section varje gång man scrollar */
 .container {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
@@ -120,39 +151,41 @@
   max-height: 93vh;
 }
 
+/* Klass som bestämmer vad snap scrollingen ska snapa till */
 .scrolljump {
   scroll-snap-align: start;
 }
 
-
+/* Slideshow på section 2 */
 .mySlides {
   width: 75vw;
-  height: 65vh;
+  height: 75vh;
   background-color: rgba(0, 0, 0, 0.75);
   position: absolute;
   margin-left: 12.5vw;
-  margin-top: 17.5vh;
+  margin-top: 10vh;
   overflow-y:auto;
   border-radius: 20px;
 }
 
+/* pilarna som styr slideshown */
 .prev, .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
-  margin-top: 48vh;
+  margin-top: 27.5vh;
   width: 3vw;
-  height: 2em;
+  height: 3vh;
 }
 
 .next {
   right: 0;
-  margin-right: 9.5vw;
+  margin-right: 7.5vw;
   transform: rotate(-90deg);
 }
 
 .prev {
-  margin-left: 9.5vw;
+  margin-left: 7.5vw;
   transform: rotate(90deg);
 }
 
@@ -163,7 +196,9 @@
 .next:hover {
   opacity: 0.5;
 }
+/* Styling för pilarna tar slut */
 
+/* Bestämmer placering på listan som används för att indikera vilken slide man är på*/
 ol {
   width:100%;
   margin-left: 33.75vw;
@@ -171,32 +206,53 @@ ol {
   bottom: 0;
 }
 
+/* Gör varje list item till en vit cirkel */
 ol li{
   background: white;
   border-radius: 50%;
   display: inline-block;
   width:2vw;
   height:2vh;
-  cursor: pointer;
 }
 
+/* Byter färg på list item cirkeln som indikerar den aktuella sliden till röd */
 .red {
   background-color: red;
 }
 
 .dcsinfotext {
   color: white;
-  font-size: 2.4vw;
-  margin-top: 2vh;
+  font-size: 2.5vmax;
+  margin-top: 4vh;
   margin-left: 2vw;
+  margin-bottom: 2vh;
 }
 
+/* Gör texten i slideshown mindre när skärmens bredd blir mindre än 600 pixel*/
+@media (max-width: 600px) {
+  .dcsinfotext {
+    font-size: 2.3vmax;
+  }
+}
+
+/* Bakgrund för section 3 */
 #three {
   background-image: url(../img/clouds.gif);
   background-size: cover;
   background-attachment: fixed;;
 }
 
+/* Rubrik på section 3 */
+.paircraft {
+  font-size: 3.7vw;
+  width: 45vw;
+  color: white;
+  margin-left: 27.5vw;
+  margin-top: 9vh;
+  text-shadow: -2px 2px 0 #000, 2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000;
+}
+
+/* Placering av bilderna på flygplan med flexbox */
 .flygplanplacement {
   display: flex;
   flex-wrap: wrap;
@@ -205,11 +261,13 @@ ol li{
   width: 80vw;
   margin-top: 5vh;
   margin-left: 10vw;
+  margin-right: 5vw;
 }
 
+/* Styling för bilderna */ 
 .plane {
   width: 20vw;
-  height: 25vh;
+  height: 70%;
   border: solid 4px white;
   border-radius: 10px;
   transition: 200ms;
@@ -218,12 +276,4 @@ ol li{
 
 .planebutton:hover {
   filter: grayscale(0.5);
-}
-
-.paircraft {
-  font-size: 3em;
-  color: white;
-  margin-left: 30vw;
-  margin-top: 7vh;
-  text-shadow: -2px 2px 0 #000, 2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000;
 }

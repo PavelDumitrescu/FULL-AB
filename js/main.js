@@ -1,3 +1,4 @@
+// All javascript är till slideshown på section 2 
 var slideIndex = 1;
 showSlides(slideIndex);
 

@@ -6,7 +6,7 @@
     <meta name="description" content="This is the landing site of WokMcdonald's!">
     <title>FULL-AB</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prompt">
-    <link rel="icon" href="./img/mc-logo.png">
+    <link rel="icon" href="./img/F16_drawing.png">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/grid.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,7 @@
   </head>
   <body>
 
-
+<!-- Navbar som sitter utanfrör grid med interna länkar för navigering -->
     <div id="navbar">
       <p class="pagename">Full AB</p>
       <img class="logo" src="./img/F16_drawing.png">
@@ -26,21 +26,26 @@
     </div>
 
     <div class="container">
+<!-- Sidans första del, varje section är gjord för ta upp hela viewporten minus navbaren-->
       <section class="one scrolljump" id="one">
         <img src="./img/f-16.jpg" alt="Two F-sixteens" class="f16intro">
         <div class="dcs1">
           <img src="./img/dcs.png" alt="Digital Combat Simulator" class="dcs2">
         </div>
+<!-- pil för att skrolla ned till nästa section, är valfri att använda, vanlig skrollning fungerar också-->
           <a href="#two" class="d1l"><img src="./img/down.png" class="d1"></a>
       </section>
-
+<!-- Del två av sidan-->
       <section class="two scrolljump" id="two">
+<!-- Ljudlös video som spelas i bakgrunden -->
         <video autoplay muted loop id="myVideo">
           <source src="./img/dcsmovie.mp4" type="video/mp4">
         </video>
+<!-- Slideshow med text på varje sida -->
         <div class="slideshow-container">
           <div class="mySlides">
             <p class="dcsinfotext">DCS World is a study sim in which players learn how to operate aircraft using realistic procedures. Aircraft are meticulously modeled from real-world data, including authentic flight models and subsystems and detailed cockpits with interactive buttons and switches. Digital manuals document the history, systems and operation of each aircraft in extensive detail. The game has extensive support for joysticks and HOTAS input devices ranging from gamepads to 1:1 replica cockpits.
+<!-- Tre prickar som indikerar vilken sida av slideshown som du befinner dig på. Består av en lista där varje list item är stylad som en prick, en av prickarna blir röd beroende på vilken sida av slideshown som du befinner dig på-->
             <ol>
               <li class="red"></li>
               <li></li>
@@ -56,26 +61,30 @@
             </ol>
           </div>
           <div class="mySlides">
-            <p class="dcsinfotext">DCS World acts as a unified modular platform, in contrast to previous installments in the series which were standalone products. This allows users of different modules to switch between aircraft and play together within a single game client. The platform also allows third-party developers to publish modules through Eagle Dynamics' storefront. Community mods have also been produced.
+            <p class="dcsinfotext">DCS World acts as a unified modular platform, in contrast to previous installments in the series which were standalone products. This allows users of different modules to switch between aircraft and play together within a single game client. The platform also allows third-party developers to publish modules through Eagle Dynamics' storefront.
             <ol>
               <li></li>
               <li></li>
               <li class="red"></li>
             </ol>
           </div>
-
+<!-- Knappar för att byta slides i slideshown-->
           <a class="prev" onclick="plusSlides(-1)"><img src="./img/down.png" class="d1"></a>
           <a class="next" onclick="plusSlides(1)"><img src="./img/down.png" class="d1"></a>
         </div>
+<!-- Knappar för att skrolla upp/ned bland sections, är valfria att använda-->
         <a href="#three" class="d1l"><img src="./img/down.png" class="d1"></a>
         <a href="#one" class="u1l"><img src="./img/down.png" class="u1"></a>
       </section>
 
-
+<!-- Del tre av sidan -->
       <section class="three scrolljump" id="three">
+<!-- knappar upp/ned för section-->
         <a href="#four" class="d1l"><img src="./img/down.png" class="d1"></a>
         <a href="#two" class="u1l"><img src="./img/down.png" class="u1"></a>
+<!-- Titel på sidan -->
         <h1 class="paircraft">Popular aircraft modules</h1>
+<!-- Bilder på flygplan som är länkar till wikipedia sidorna om flygplanen. Är placerade med flexbox -->
         <div class="flygplanplacement">
           <a href="https://sv.wikipedia.org/wiki/Fairchild-Republic_A-10_Thunderbolt_II" class="planebutton" target="_blank"><img src="./img/a10.jpg" class="plane"></a>
           <a href="https://sv.wikipedia.org/wiki/McDonnell_Douglas_F/A-18_Hornet" class="planebutton" target="_blank"><img src="./img/hornet.jpg" class="plane"></a>
@@ -86,6 +95,7 @@
         </div>
       </section>
 
+<!-- Det skulle finnas mer inehåll på sidan men det finns inte tid för det -->
       <section class="four scrolljump" id="four">
       </section>
 

@@ -232,6 +232,22 @@ ol li{
   }
 }
 
+.nojs {
+  margin-top: 90vh;
+  margin-right: 1vw;
+  float: right;
+  color: red;
+  font-size: 1vw;
+  border: 1px solid white;
+}
+
+.slidecontent {
+  display: block;
+  font-size: 2vw;
+  margin-bottom: 10vh;
+  margin-left: 1vw;
+  margin-top: 2vh;
+}
 /* Bakgrund för section 3 */
 #three {
   background-image: url(../img/clouds.gif);
